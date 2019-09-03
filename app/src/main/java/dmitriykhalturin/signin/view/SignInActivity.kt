@@ -1,8 +1,8 @@
 package dmitriykhalturin.signin.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import dmitriykhalturin.signin.R
@@ -23,7 +23,10 @@ class SignInActivity : AppCompatActivity() {
 
     binding.signInViewModel = signInViewModel
 
-    supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    supportActionBar?.apply {
+      setDisplayHomeAsUpEnabled(true)
+      setHomeAsUpIndicator(R.drawable.ic_back)
+    }
   }
 
   override fun onCreateOptionsMenu(menu: Menu?): Boolean {

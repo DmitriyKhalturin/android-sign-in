@@ -5,10 +5,27 @@
     <item name="colorPrimary">@color/colorPrimary</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
+
+    <item name="actionBarStyle">@style/CustomActionBar</item>
+    <item name="android:actionMenuTextColor">@color/dark_sky_blue</item>
+
+    <item name="buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
+
+    <item name="android:background">@color/white</item>
+  </style>
+
+  <style name="CustomActionBar" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+    <item name="background">@color/white</item>
+  </style>
+
+  <style name="CustomActionBarTitle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+    <item name="android:textColor">@color/greyish_brown</item>
+    <item name="android:textSize">@dimen/appbar_title_size</item>
   </style>
 
   <style name="InputLayout">
-    <item name="android:textColorHint">@color/greyish_brown</item>
+    <item name="android:textColorHint">@color/brownish_grey</item>
+    <item name="android:textSize">@dimen/input_text_size</item>
   </style>
 
   <style name="InputHint" parent="TextAppearance.AppCompat">
@@ -26,9 +43,11 @@
     <item name="android:fontFamily">@font/roboto</item>
     <item name="android:textColor">@color/greyish_brown</item>
     <item name="android:textSize">@dimen/input_text_size</item>
+    <item name="android:paddingTop">8dp</item>
+    <item name="android:paddingBottom">12dp</item>
   </style>
 
-  <style name="Button">
+  <style name="ButtonTheme">
     <item name="colorAccent">@color/tangerine</item>
     <item name="colorButtonNormal">@color/tangerine</item>
     <item name="colorControlHighlight">@color/white</item>

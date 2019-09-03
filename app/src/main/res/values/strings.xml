@@ -10,5 +10,6 @@
 
   <string name="button__enter">Enter</string>
 
+  <string name="rules__email">Please insert correct email. Example: example@mail.com</string>
   <string name="rules__password">Your password has to be at least 6 characters long. Must contain at least one lower case letter, one upper case letter, one digit.</string>
 </resources>
