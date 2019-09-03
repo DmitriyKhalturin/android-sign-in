@@ -19,7 +19,7 @@ object BindingAdapter {
     val backgroundColor = ContextCompat.getColor(context, R.color.greyish_brown)
     var tooltip: ViewTooltip?
 
-    textInputLayout.setEndIconOnClickListener { view ->
+    textInputLayout.setEndIconOnClickListener { _ ->
       tooltip = ViewTooltip
         .on(textInputLayout)
         .autoHide(true, 3000L)

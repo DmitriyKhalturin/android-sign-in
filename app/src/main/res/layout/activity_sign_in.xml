@@ -4,62 +4,87 @@
   xmlns:app="http://schemas.android.com/apk/res-auto">
 
   <data>
+    <import type="android.view.View" />
     <variable
       name="signInViewModel"
       type="dmitriykhalturin.signin.viewmodel.SignInViewModel"
       />
   </data>
 
-  <LinearLayout
+  <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="@dimen/control_indent"
-    android:clickable="true"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    tools:context=".view.SignInActivity">
+    android:layout_height="match_parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-      style="@style/InputLayout"
+    <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="8dp"
-      android:theme="@style/InputLayoutTheme"
-      app:hintTextAppearance="@style/InputHint">
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:padding="@dimen/control_indent"
+      android:clickable="true"
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      android:background="@color/white"
+      tools:context=".view.SignInActivity">
 
-      <com.google.android.material.textfield.TextInputEditText
-        style="@style/InputEdit"
+      <com.google.android.material.textfield.TextInputLayout
+        style="@style/InputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hint__email"
-        android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginBottom="8dp"
+        android:theme="@style/InputLayoutTheme"
+        app:hintTextAppearance="@style/InputHint">
 
-    <com.google.android.material.textfield.TextInputLayout
-      style="@style/InputLayout"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:theme="@style/InputLayoutTheme"
-      app:hintTextAppearance="@style/InputHint"
-      app:endIconMode="custom"
-      app:endIconDrawable="@drawable/ic_rules"
-      app:rulesTooltip="@{@string/rules__password}">
+        <com.google.android.material.textfield.TextInputEditText
+          style="@style/InputEdit"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@={signInViewModel.email}"
+          android:hint="@string/hint__email"
+          android:inputType="textEmailAddress" />
+      </com.google.android.material.textfield.TextInputLayout>
 
-      <com.google.android.material.textfield.TextInputEditText
-        style="@style/InputEdit"
+      <com.google.android.material.textfield.TextInputLayout
+        style="@style/InputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hint__password"
-        android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:theme="@style/InputLayoutTheme"
+        app:hintTextAppearance="@style/InputHint"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_rules"
+        app:rulesTooltip="@{@string/rules__password}">
 
-    <Button
-      android:id="@+id/button_enter"
+        <com.google.android.material.textfield.TextInputEditText
+          style="@style/InputEdit"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@={signInViewModel.password}"
+          android:hint="@string/hint__password"
+          android:inputType="textPassword" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <Button
+        android:id="@+id/button_enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/button__enter"
+        android:onClick="@{() -> signInViewModel.signIn()}"
+        android:theme="@style/ButtonTheme" />
+    </LinearLayout>
+
+    <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="18dp"
-      android:text="@string/button__enter"
-      android:theme="@style/ButtonTheme" />
-  </LinearLayout>
+      android:layout_height="match_parent"
+      android:background="@color/loading_background"
+      android:clickable="true"
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      android:gravity="center"
+      android:visibility="@{signInViewModel.isLoading ? View.VISIBLE : View.GONE}">
+
+      <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+  </RelativeLayout>
 </layout>

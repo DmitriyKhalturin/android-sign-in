@@ -10,8 +10,6 @@
     <item name="android:actionMenuTextColor">@color/dark_sky_blue</item>
 
     <item name="buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
-
-    <item name="android:background">@color/white</item>
   </style>
 
   <style name="CustomActionBar" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
