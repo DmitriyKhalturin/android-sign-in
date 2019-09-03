@@ -1,0 +1,14 @@
+<resources>
+  <string name="app_name">Sign In</string>
+
+  <string name="item_menu__create">Create</string>
+  
+  <string name="title__authorization">Authorization</string>
+
+  <string name="hint__email">Email</string>
+  <string name="hint__password">Password</string>
+
+  <string name="button__enter">Enter</string>
+
+  <string name="rules__password">Your password has to be at least 6 characters long. Must contain at least one lower case letter, one upper case letter, one digit.</string>
+</resources>

@@ -1,0 +1,37 @@
+<resources>
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
+
+  <style name="InputLayout">
+    <item name="android:textColorHint">@color/greyish_brown</item>
+  </style>
+
+  <style name="InputHint" parent="TextAppearance.AppCompat">
+    <item name="android:textColor">@color/dark_sky_blue</item>
+    <item name="android:textSize">@dimen/hint_size</item>
+  </style>
+
+  <style name="InputLayoutTheme">
+    <item name="colorAccent">@color/dark_sky_blue</item>
+    <item name="colorControlNormal">@color/greyish_brown</item>
+    <item name="colorControlActivated">@color/dark_sky_blue</item>
+  </style>
+
+  <style name="InputEdit">
+    <item name="android:fontFamily">@font/roboto</item>
+    <item name="android:textColor">@color/greyish_brown</item>
+    <item name="android:textSize">@dimen/input_text_size</item>
+  </style>
+
+  <style name="Button">
+    <item name="colorAccent">@color/tangerine</item>
+    <item name="colorButtonNormal">@color/tangerine</item>
+    <item name="colorControlHighlight">@color/white</item>
+    <item name="android:fontFamily">@font/roboto_medium</item>
+  </style>
+</resources>
